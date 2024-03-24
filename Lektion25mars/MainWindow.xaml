@@ -7,5 +7,22 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Meny -->
+        <Menu Grid.Row="0">
+            <MenuItem Header="_File">
+                <MenuItem Header="Open" Click="Open_Click"/>
+                <MenuItem Header="Save" Click="Save_Click"/>
+                <MenuItem Header="Save As" Click="SaveAs_Click"/>
+            </MenuItem>
+        </Menu>
+
+        <!-- TextBox för att visa och redigera filinnehåll -->
+        <TextBox Text="{Binding FilText}" Grid.Row="1" Margin="10" TextWrapping="Wrap" AcceptsReturn="True"
+                 VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"/>
     </Grid>
 </Window>
