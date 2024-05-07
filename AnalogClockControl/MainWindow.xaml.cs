@@ -22,9 +22,6 @@ namespace AnalogClockControl
             InitializeComponent();
         }
 
-        private void AnalogClock_TimeChanged(object sender, RoutedPropertyChangedEventArgs<DateTime> e)
-        {
-            tbTime.Text = e.NewValue.ToString("hh:mm:ss");
-        }
+
     }
 }

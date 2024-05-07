@@ -6,10 +6,9 @@
         xmlns:local="clr-namespace:AnalogClockControl"
         xmlns:custom="clr-namespace:AnalogClockControl.CustomControls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" SizeToContent="Height">
+        Title="MainWindow" Height="800" Width="600" >
 
     <StackPanel >
-        <custom:AnalogClock ShowSeconds="True" TimeChanged="AnalogClock_TimeChanged" ></custom:AnalogClock>
-        <TextBox x:Name="tbTime" FontSize="25" HorizontalAlignment="Center"></TextBox>
+        <custom:AnalogClock></custom:AnalogClock>
     </StackPanel>
 </Window>

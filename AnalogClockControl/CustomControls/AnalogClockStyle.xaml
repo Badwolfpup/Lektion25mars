@@ -6,32 +6,13 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="local:AnalogClock">
-                    <ControlTemplate.Resources>
-                        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"></BooleanToVisibilityConverter>
-                    </ControlTemplate.Resources>
+                  
                     <Grid RenderTransformOrigin="0.5 0.5" x:Name="Clock">
                         <Grid.RenderTransform>
                             <RotateTransform Angle="90"></RotateTransform>
                         </Grid.RenderTransform>
 
-                        <VisualStateManager.VisualStateGroups>
-                            <VisualStateGroup x:Name="TimeState">
-                                <VisualState x:Name="Day">
-                                    <Storyboard>
-                                        <ColorAnimation Storyboard.TargetName="ClockFill" Storyboard.TargetProperty="Color" To="SkyBlue"></ColorAnimation>
-                                        <ColorAnimation Storyboard.TargetName="HourStroke" Storyboard.TargetProperty="Color" To="Gold"></ColorAnimation>
-                                        <ColorAnimation Storyboard.TargetName="MinuteStroke" Storyboard.TargetProperty="Color" To="Gold"></ColorAnimation>
-                                        <DoubleAnimation Storyboard.TargetName="Clock" Storyboard.TargetProperty="Opacity" To="0"></DoubleAnimation>
-                                    </Storyboard>
-                                </VisualState>
-                                <VisualState x:Name="Night">
-                                    <Storyboard>
-                                        <ColorAnimation Storyboard.TargetName="ClockFill" Storyboard.TargetProperty="Color" To="Black"></ColorAnimation>
-                                        <ColorAnimation Storyboard.TargetName="HourStroke" Storyboard.TargetProperty="Color" To="Wheat"></ColorAnimation>
-                                        <ColorAnimation Storyboard.TargetName="MinuteStroke" Storyboard.TargetProperty="Color" To="Wheat"></ColorAnimation>
-                                    </Storyboard>                                </VisualState>
-                            </VisualStateGroup>
-                        </VisualStateManager.VisualStateGroups>
+                      
 
                         <Ellipse x:Name="PART_border" Stroke="Black" StrokeThickness="1" Width="210" Height="210">
                             <Ellipse.Fill>
@@ -48,7 +29,7 @@
                                 <SolidColorBrush Color="Black" x:Name="MinuteStroke"></SolidColorBrush>
                             </Line.Stroke>
                         </Line>
-                                <Line x:Name="PART_secondhand" Visibility="{TemplateBinding ShowSeconds, Converter={StaticResource BooleanToVisibilityConverter}}" Stroke="Red" StrokeThickness="1" HorizontalAlignment="Center" VerticalAlignment="Center" X1="0" X2="-100"></Line>
+                                <Line x:Name="PART_secondhand" Stroke="Red" StrokeThickness="1" HorizontalAlignment="Center" VerticalAlignment="Center" X1="0" X2="-100"></Line>
 
                     </Grid>
                 </ControlTemplate>
