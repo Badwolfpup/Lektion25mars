@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using AnalogClockControl.CustomControls;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,6 +20,11 @@ namespace AnalogClockControl
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void AnalogClock_TimeChanged(object sender, RoutedPropertyChangedEventArgs<DateTime> e)
+        {
+            tbTime.Text = e.NewValue.ToString("hh:mm:ss");
         }
     }
 }

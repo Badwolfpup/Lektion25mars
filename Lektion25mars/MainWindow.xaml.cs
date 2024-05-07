@@ -32,12 +32,6 @@ namespace Lektion25mars
                 }
             }
         }
-        public MainWindow()
-        {
-            InitializeComponent();
-            DataContext = this;
-            FilText = "hej";
-        }
 
         public event PropertyChangedEventHandler? PropertyChanged;
 
@@ -45,6 +39,14 @@ namespace Lektion25mars
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyname));
         }
+        public MainWindow()
+        {
+            InitializeComponent();
+            DataContext = this;
+            FilText = "hej";
+        }
+
+       
         private void Open_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
